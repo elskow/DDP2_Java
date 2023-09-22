@@ -1,7 +1,6 @@
 package DDP2.CSUI;
 
-import DDP2.CSUI.Member;
-import DDP2.CSUI.TimeMechanic;
+import DDP2.CSUI.utils.TimeMechanic;
 
 public class Nota {
     protected static int idNota, berat, sisaHariPengerjaan;

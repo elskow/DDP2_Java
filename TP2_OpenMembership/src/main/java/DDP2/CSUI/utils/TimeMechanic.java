@@ -1,4 +1,4 @@
-package DDP2.CSUI;
+package DDP2.CSUI.utils;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

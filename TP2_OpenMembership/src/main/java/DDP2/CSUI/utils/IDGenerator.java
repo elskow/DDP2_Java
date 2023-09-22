@@ -33,9 +33,19 @@ public class IDGenerator {
         return strSum;
     }
 
+    protected static String modCheckSum(String checkSum){
+        int checkSumInt = Integer.parseInt(checkSum);
+        checkSumInt = checkSumInt % 100;
+
+        if (checkSumInt < 10) return "0" + Integer.toString(checkSumInt);
+        else return Integer.toString(checkSumInt);
+    }
+
     public static String generateID() {
         String fName = name.split(" ")[0].toUpperCase();
         String checksum = calculateChecksum(fName, phoneNumber);
+
+        if (checksum.length() > 2) checksum = modCheckSum(checksum);
 
         return fName + "-" + phoneNumber + "-" + checksum;
     }
